@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Phone Augmentation</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link rel="stylesheet" href="stylesheets/stylesheet.css">
+	<meta name="viewport" content="width=device-width;initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0;user-scalable=no">
+	<style>
+
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+
+	$(window).on("load",function(){
+		console.log('hello world');
+
+		    $('body').keydown(function(e){
+        if(e.keyCode == 66){
+            $('.bourbon').slideToggle(900); 
+        }
+
+                if(e.keyCode == 65){
+            $('.angostura-bitters').slideToggle(900); 
+        }
+    });
+
+
+		$('.cocktail').on('click', function(){	
+			$(this).toggleClass("cocktail-selected");
+			$('.cocktail').not(this).removeClass("cocktail-selected");
+			$('.cocktail').not(this).find('.cocktail-recipe').hide();
+			$(this).find('.cocktail-recipe').slideToggle(900);
+			console.log('fire');
+			
+		});
+		$(".available-btn").on('click', function(){
+			$('.available-cocktails').slideToggle(900);
+			$('.party-btn').css({ opacity: 0.2 });
+			$('.shop-btn').css({ opacity: 0.2 });
+		});
+	});
+	</script>
+
+</head>
+<div class = 'available-btn'><img src="images/available_btn.png"></div>
+<div class = 'party-btn'><img src="images/party_btn.png"></div>
+<div class = 'shop-btn'><img src="images/shop_btn.png"></div>
+<div class = 'play-btn'><img src="images/play_btn.png"></div>
+
+<div class = 'content-area'>
+	<div class = 'available-cocktails'>
+		<div class = 'head'>
+			<span class = 'title'>Available Cocktails</span>
+		</div>
+
+		<div class = "available-cocktails-body">
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/highball_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>Old Fashioned</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Rye Bourbon</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward, Sweet</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>Old Fashioned</strong></span></div>
+					<div class = "recipe-body">
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_ice_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD ICE and STIR</strong></div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/strain_highball.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>STRAIN</strong> into a Highball Glass</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/martini_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>Manhattan</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Bourbon</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>Manhattan</strong></span></div>
+					<div class = "recipe-body">
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/highball_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>American Trilogy</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Bourbon, Applejack</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>American Trilogy</strong></span></div>
+					<div class = "recipe-body">
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/collins_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>Whiskey Smash</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Bourbon, Applejack</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>Whiskey Smash</strong></span></div>
+					<div class = "recipe-body">
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/martini_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>Something</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Bourbon, Applejack</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>Something</strong></span></div>
+					<div class = "recipe-body">
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class = "cocktail">
+				<div class = "cocktail-left">
+					<img src="images/martini_glass.png">
+				</div>
+				<div class = "cocktail-right">
+					<div class = "cocktail-name"><strong>Something</strong></div>
+					<div class = "base-spirit">Base Spirit <strong>Bourbon, Applejack</strong></div>
+					<div class = "profile">Profile: <strong>Spirit Forward</strong></div>
+				</div>
+
+				<div class = "cocktail-recipe">
+					<div class = "header"><span class = "cocktail-name"><strong>Something</strong></span></div>
+					<div class = "recipe-body">
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/muddle.png"></div>
+							<div class = "right">
+								<div class = "action">In a large mixing glass <strong>MUDDLE</strong></div>
+								<div class = "steps">
+									<ul>1/2 tsp <strong>Sugar</strong></ul>
+									<ul>1/2 tsp <strong>Water</strong></ul>
+								</div>
+							</div>
+						</div>
+
+						<div class = "recipe-step">
+							<div class = "left"><img src="images/add_and_stir.png"></div>
+							<div class = "right">
+								<div class = "action"><strong>ADD and STIR</strong></div>
+								<div class = "steps">
+									<ul>2 oz <strong>Bourbon</strong></ul>
+									<ul>2 Dashes <strong>Angostura Bitters</strong></ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

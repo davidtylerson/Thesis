@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+
+	<title>iScroll demo: Event Passthrough</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link rel="stylesheet" href="stylesheets/index.css">
+
+	<script type="text/javascript" src="javascript/iscroll/iscroll.js"></script>
+	<script type="text/javascript" src="javascript/iscroll/iscroll-probe.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+
+
+	var myScroll;
+	var position;
+
+	function updatePosition () {
+		position.innerHTML = this.x>>0;
+	}
+
+	function makeSmall(){
+			$('.three').removeClass('big');
+			$('.four').removeClass('big');
+			$('.five').removeClass('big');
+			$('.six').removeClass('big');
+			$('.seven').removeClass('big');
+			$('.eight').removeClass('big');
+			$('.nine').removeClass('big');
+			$('.ten').removeClass('big');
+	}
+
+	function printPosition () {
+		console.log(position.innerHTML);
+		if(position.innerHTML == 0){
+			console.log('yeah');
+			makeSmall();
+			$('.three').addClass('big');
+		}else if(position.innerHTML == -120){
+			console.log('yeah');
+			makeSmall();
+			$('.four').addClass('big');
+		} else if(position.innerHTML == -240){
+			makeSmall();
+			$('.five').addClass('big');
+		}else if(position.innerHTML == -360){
+			makeSmall();
+			$('.six').addClass('big');
+		}else if(position.innerHTML == -480){
+			makeSmall();
+			$('.seven').addClass('big');
+		}else if(position.innerHTML == -600){
+			makeSmall();
+			$('.eight').addClass('big');
+		}else if(position.innerHTML == -720){
+			makeSmall();
+			$('.nine').addClass('big');
+		}else if(position.innerHTML == -840){
+			makeSmall();
+			$('.ten').addClass('big');
+		}
+	}
+
+	function loaded () {
+		position = document.getElementById('position');
+		myScroll = new IScroll('#wrapper', {scrollX: true, scrollY: false, preventDefault: false, snap: 'li', probeType: 3, mouseWheel: true});
+		myScroll.on('scrollEnd', updatePosition);
+		myScroll.on('scrollEnd', printPosition);
+	}
+
+	$(window).on("load",function(){
+		console.log('hello world');
+		$('.three').addClass('big');
+
+		position = document.getElementById('position');
+
+	});
+
+
+
+
+	document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+	</script>
+
+	<style type="text/css">
+
+
+	</style>
+</head>
+<body onload="loaded()">
+	<div id="monitor">X position: <strong id="position">0</strong></div>
+	<div id="wrapper">
+		<div id="scroller">
+			<ul>
+				<li class = 'one'></li>
+				<li class = 'two'></li>
+				<li class = 'three'></li>
+				<li class = 'four'><a href="cocktailapp-index.html"></a></li>
+				<li class = 'five'></li>
+				<li class = 'six'></li>
+				<li class = 'seven'></li>
+				<li class = 'eight'></li>
+				<li class = 'nine'></li>
+				<li class = 'ten'></li>
+
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

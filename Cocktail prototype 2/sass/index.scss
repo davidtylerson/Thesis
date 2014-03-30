@@ -1,0 +1,95 @@
+	$backgroundcolor: black;
+	$foregroundcolor: white;
+	$btnOpacity: .2;
+	$btnOpacityBig: 1;
+
+	* {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	body,ul,li {
+		padding: 0;
+		margin: 0;
+		border: 0;
+	}
+
+	body {
+		font-size: 12px;
+		font-family: ubuntu, helvetica, arial;
+		background-color: black
+	}
+
+	#header {
+		width: 100%;
+		height: 45px;
+		line-height: 45px;
+		background: #CD235C;
+		padding: 0;
+		color: #eee;
+		font-size: 20px;
+		text-align: center;
+		font-weight: bold;
+	}
+
+	#wrapper {
+		position: absolute;
+		z-index: 1;
+		height: 150px;
+		width: 560px;
+		overflow: hidden;
+		padding-top: 35px;
+		top:350px;
+		left: 120px;
+	}
+
+
+	#scroller {
+		position: absolute;
+		z-index: 1;
+		width: 2400px;
+		height: 80px;
+
+	}
+
+	#scroller ul {
+		list-style: none;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+	}
+
+	#scroller li {
+		width: 80px;
+		height: 80px;
+		float: left;
+		overflow: hidden;
+		border-radius: 40px;
+		background-color: white;
+		margin-right: 20px;
+	}
+
+	#scroller li~li {
+		margin-left: 20px;
+	}
+
+	li a {
+		display: block;
+		width: 100%;
+		height: 100%
+
+	}
+
+
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten{
+		-webkit-transition: all 500ms; 
+		opacity: $btnOpacity;
+
+		&.big {
+			-webkit-transition: all 500ms; 
+			-webkit-transform: scale(1.5);
+			opacity: $btnOpacityBig; 
+
+		}
+	}

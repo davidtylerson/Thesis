@@ -1,0 +1,60 @@
+.background{
+
+width: 1280px;
+height: 800px;
+background-color: black;
+position: absolute;
+
+}
+
+.stud1{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 5px;
+	top: 0px;
+}
+
+.stud2{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 255px;
+	top: 0px;
+}
+
+
+.stud3{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 505px;
+	top: 0px;
+}
+
+
+.stud4{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 755px;
+	top: 0px;
+}
+
+
+.stud5{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 1005px;
+	top: 0px;
+}
+
+.stud6{
+	position: absolute;
+	width: 21px;
+	height: 800px;
+	left: 1252px;
+	top: 0px;
+}
+

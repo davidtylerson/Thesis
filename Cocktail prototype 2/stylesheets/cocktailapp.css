@@ -1,0 +1,230 @@
+/* line 4, ../sass/cocktailapp.scss */
+body {
+  position: absolute;
+  width: 1200px;
+  height: 760px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: white;
+  text-rendering: optimizelegibility;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* line 16, ../sass/cocktailapp.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 21, ../sass/cocktailapp.scss */
+.available-btn {
+  position: absolute;
+  top: 400px;
+  left: 120px;
+  width: 60px;
+  height: 60px;
+}
+/* line 28, ../sass/cocktailapp.scss */
+.available-btn img {
+  width: 100%;
+  height: 100%;
+}
+/* line 33, ../sass/cocktailapp.scss */
+.available-btn.animate {
+  -webkit-transition: all 700ms cubic-bezier(0.595, 0.075, 0.625, 1.7);
+  -webkit-transform: translate(80px, 0px);
+}
+
+/* line 39, ../sass/cocktailapp.scss */
+.play-btn {
+  position: absolute;
+  top: 400px;
+  left: 200px;
+  max-width: 60px;
+  height: 60px;
+}
+/* line 46, ../sass/cocktailapp.scss */
+.play-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 53, ../sass/cocktailapp.scss */
+.party-btn {
+  position: absolute;
+  top: 400px;
+  left: 280px;
+  width: 60px;
+  height: 60px;
+}
+/* line 60, ../sass/cocktailapp.scss */
+.party-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 65, ../sass/cocktailapp.scss */
+.shop-btn {
+  position: absolute;
+  top: 400px;
+  left: 360px;
+  width: 60px;
+  height: 60px;
+}
+/* line 72, ../sass/cocktailapp.scss */
+.shop-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 78, ../sass/cocktailapp.scss */
+.back-btn {
+  display: none;
+  position: absolute;
+  top: 420px;
+  left: 120px;
+  width: 25px;
+  height: 25px;
+}
+/* line 86, ../sass/cocktailapp.scss */
+.back-btn img {
+  width: 100%;
+  height: 100%;
+}
+
+/* line 93, ../sass/cocktailapp.scss */
+.content-area {
+  position: absolute;
+  top: 470px;
+  left: 120px;
+  width: 1000px;
+  height: 400px;
+  display: inline-block;
+}
+/* line 101, ../sass/cocktailapp.scss */
+.content-area .available-cocktails {
+  position: absolute;
+  display: none;
+}
+/* line 106, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .head {
+  width: 240px;
+  height: 34px;
+  border-top: solid;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+  border-top-width: 5px;
+  display: inline-block;
+  font-size: 20px;
+  padding-top: 5px;
+}
+/* line 118, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .head .title {
+  font-weight: bold;
+}
+/* line 122, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .available-cocktails-body {
+  height: 240px;
+  width: 240px;
+  overflow: auto;
+}
+/* line 127, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail {
+  width: 240px;
+  height: 59px;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+  padding-top: 10px;
+}
+/* line 135, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-left {
+  width: 20%;
+  display: inline-block;
+  float: left;
+}
+/* line 140, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-left img {
+  margin-left: 4px;
+  margin-top: 4px;
+}
+/* line 143, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-right {
+  width: 80%;
+  display: inline-block;
+  float: right;
+}
+/* line 148, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-right .cocktail-name {
+  font-size: 15px;
+  margin-left: 8px;
+}
+/* line 152, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-right .base-spirit {
+  font-size: 12px;
+  margin-left: 8px;
+}
+/* line 156, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail .cocktail-right .profile {
+  font-size: 12px;
+  margin-left: 8px;
+}
+/* line 164, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-selected {
+  background-color: #494949;
+}
+/* line 167, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe {
+  position: absolute;
+  top: 0;
+  left: 280px;
+  width: 330px;
+  display: inline-block;
+  background-color: black;
+  display: none;
+}
+/* line 176, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .header {
+  border-top: solid;
+  border-bottom: solid;
+  border-top-width: 5px;
+  border-bottom-width: 1px;
+  border-color: white;
+  font-size: 20px;
+  height: 34px;
+  padding-top: 5px;
+}
+/* line 186, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body {
+  margin-right: 0;
+  overflow: auto;
+  height: 305px;
+}
+/* line 191, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body .recipe-step {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  height: 122px;
+  width: 330px;
+}
+/* line 197, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body .recipe-step .left {
+  width: 30%;
+  float: left;
+}
+/* line 201, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body .recipe-step .right {
+  width: 70%;
+  float: right;
+  margin-top: 15px;
+}
+/* line 206, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body .recipe-step .right .action {
+  font-size: 15px;
+}
+/* line 209, ../sass/cocktailapp.scss */
+.content-area .available-cocktails .cocktail-recipe .recipe-body .recipe-step .right ul {
+  font-size: 12px;
+  padding-left: 10px;
+}

@@ -1,0 +1,312 @@
+/* line 1, ../sass/main.scss */
+.background {
+  overflow: hidden;
+  width: 1280px;
+  height: 800px;
+  background-color: black;
+  position: absolute;
+}
+/* line 9, ../sass/main.scss */
+.background .structural_btn {
+  position: absolute;
+  width: 144px;
+  height: 36px;
+  left: 20px;
+  top: 740px;
+  opacity: .4;
+}
+/* line 17, ../sass/main.scss */
+.background .structural_btn.toggle {
+  opacity: 1;
+}
+/* line 22, ../sass/main.scss */
+.background .electrical_btn {
+  position: absolute;
+  width: 137px;
+  height: 36px;
+  left: 20px;
+  top: 700px;
+  opacity: .4;
+}
+/* line 30, ../sass/main.scss */
+.background .electrical_btn.toggle {
+  opacity: 1;
+}
+/* line 35, ../sass/main.scss */
+.background .panels {
+  display: none;
+}
+/* line 38, ../sass/main.scss */
+.background .panels.toggle {
+  display: block;
+}
+/* line 42, ../sass/main.scss */
+.background .panels .light {
+  background-color: white;
+  position: absolute;
+  width: 120px;
+  height: 68px;
+  left: 1061px;
+  top: 685px;
+}
+/* line 51, ../sass/main.scss */
+.background .panels .projector {
+  background-color: white;
+  position: absolute;
+  width: 94px;
+  height: 64px;
+  left: 1079px;
+  top: 558px;
+}
+/* line 60, ../sass/main.scss */
+.background .panels .screen {
+  background-color: white;
+  position: absolute;
+  width: 47px;
+  height: 72px;
+  left: 1102px;
+  top: 414px;
+}
+/* line 69, ../sass/main.scss */
+.background .panels .fire {
+  background-color: white;
+  position: absolute;
+  width: 82px;
+  height: 79px;
+  left: 1086px;
+  top: 122px;
+}
+/* line 81, ../sass/main.scss */
+.background .structure {
+  display: none;
+}
+/* line 85, ../sass/main.scss */
+.background .structure.toggle {
+  display: block;
+}
+/* line 89, ../sass/main.scss */
+.background .structure .stud1 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 5px;
+  top: 0px;
+}
+/* line 97, ../sass/main.scss */
+.background .structure .stud2 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 255px;
+  top: 0px;
+}
+/* line 105, ../sass/main.scss */
+.background .structure .stud3 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 505px;
+  top: 0px;
+}
+/* line 113, ../sass/main.scss */
+.background .structure .stud4 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 755px;
+  top: 0px;
+}
+/* line 121, ../sass/main.scss */
+.background .structure .stud5 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 1005px;
+  top: 0px;
+}
+/* line 129, ../sass/main.scss */
+.background .structure .stud6 {
+  position: absolute;
+  width: 21px;
+  height: 800px;
+  left: 1252px;
+  top: 0px;
+}
+/* line 137, ../sass/main.scss */
+.background .structure .flange {
+  position: absolute;
+  width: 20px;
+  height: 800px;
+  left: 138px;
+  top: 0px;
+}
+/* line 145, ../sass/main.scss */
+.background .structure .stud_desc {
+  position: absolute;
+  width: 311px;
+  height: 247px;
+  left: 524px;
+  top: 120px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 154, ../sass/main.scss */
+.background .structure .stud_desc.animate {
+  opacity: 1;
+}
+/* line 161, ../sass/main.scss */
+.background .structure .flange_desc {
+  position: absolute;
+  width: 363px;
+  height: 299px;
+  left: 139px;
+  top: 290px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 170, ../sass/main.scss */
+.background .structure .flange_desc.animate {
+  opacity: 1;
+}
+/* line 177, ../sass/main.scss */
+.background .elec {
+  display: none;
+}
+/* line 181, ../sass/main.scss */
+.background .elec.toggle {
+  display: block;
+}
+/* line 185, ../sass/main.scss */
+.background .elec .wires {
+  position: absolute;
+  width: 266px;
+  height: 744px;
+  left: 859px;
+  top: 0px;
+}
+/* line 194, ../sass/main.scss */
+.background .elec .light1 {
+  position: absolute;
+  width: 118px;
+  height: 749px;
+  left: 943px;
+  top: 0px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 203, ../sass/main.scss */
+.background .elec .light1.on {
+  opacity: 1;
+}
+/* line 208, ../sass/main.scss */
+.background .elec .switch1 {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 1072px;
+  top: 700px;
+  opacity: .2;
+  background-color: #FF8500;
+}
+/* line 217, ../sass/main.scss */
+.background .elec .switch1.on {
+  opacity: 1;
+}
+/* line 223, ../sass/main.scss */
+.background .elec .light2 {
+  position: absolute;
+  width: 102px;
+  height: 733px;
+  left: 959px;
+  top: 0px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 232, ../sass/main.scss */
+.background .elec .light2.on {
+  opacity: 1;
+}
+/* line 237, ../sass/main.scss */
+.background .elec .switch2 {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 1098px;
+  top: 700px;
+  opacity: .2;
+  background-color: #FF8500;
+}
+/* line 246, ../sass/main.scss */
+.background .elec .switch2.on {
+  opacity: 1;
+}
+/* line 254, ../sass/main.scss */
+.background .elec .light3 {
+  position: absolute;
+  width: 86px;
+  height: 717px;
+  left: 975px;
+  top: 0px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 263, ../sass/main.scss */
+.background .elec .light3.on {
+  opacity: 1;
+}
+/* line 268, ../sass/main.scss */
+.background .elec .switch3 {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 1124px;
+  top: 700px;
+  opacity: .2;
+  background-color: #FF8500;
+}
+/* line 277, ../sass/main.scss */
+.background .elec .switch3.on {
+  opacity: 1;
+}
+/* line 282, ../sass/main.scss */
+.background .elec .light4 {
+  position: absolute;
+  width: 70px;
+  height: 701px;
+  left: 991px;
+  top: 0px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 291, ../sass/main.scss */
+.background .elec .light4.on {
+  opacity: 1;
+}
+/* line 296, ../sass/main.scss */
+.background .elec .switch4 {
+  position: absolute;
+  width: 16px;
+  height: 38px;
+  left: 1148px;
+  top: 700px;
+  opacity: .2;
+  background-color: #FF8500;
+}
+/* line 305, ../sass/main.scss */
+.background .elec .switch4.on {
+  opacity: 1;
+}
+/* line 310, ../sass/main.scss */
+.background .elec .light_desc {
+  position: absolute;
+  width: 281px;
+  height: 282px;
+  left: 662px;
+  top: 442px;
+  opacity: 0;
+  transition: 700ms;
+}
+/* line 319, ../sass/main.scss */
+.background .elec .light_desc.animate {
+  opacity: 1;
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+  <meta charset="utf-8" />
+  <title>Thesis Prototype 1</title>
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+  <script>
+
+
+
+
+  $(window).on("load",function(){
+
+
+    $(document).on("keyup", function (event) {
+     if( event.keyCode == 82){
+      $(".panels").addClass("toggle")
+      console.log("r pressed");
+    }
+    if( event.keyCode == 69){
+      $(".panels").removeClass("toggle")
+      console.log("e pressed");
+    }
+  });
+
+        $(".structural_btn").on("click", function (event) {
+      $(".structural_btn").toggleClass("toggle");
+      $(".structure").toggleClass("toggle");
+    });
+
+                $(".electrical_btn").on("click", function (event) {
+      $(".electrical_btn").toggleClass("toggle");
+      $(".elec").toggleClass("toggle");
+    });
+
+    $(".stud3").on("click", function (event) {
+      $(".stud_desc").toggleClass("animate");
+    });
+
+    $(".flange").on("click", function (event) {
+      $(".flange_desc").toggleClass("animate");
+    });
+
+
+    $(".switch1").on("click", function (event) {
+      $(".light1").toggleClass("on");
+      $(".switch1").toggleClass("on");
+      $(".light_desc").toggleClass("animate");
+    });
+
+    $(".switch2").on("click", function (event) {
+      $(".light2").toggleClass("on");
+      $(".switch2").toggleClass("on");
+    });
+
+    $(".switch3").on("click", function (event) {
+      $(".light3").toggleClass("on");
+      $(".switch3").toggleClass("on");
+    });
+
+    $(".switch4").on("click", function (event) {
+      $(".light4").toggleClass("on");
+      $(".switch4").toggleClass("on");
+    });
+    console.log("click");
+  });
+
+
+
+
+
+  </script>
+  <style>
+  </style>
+</head>
+<body>
+
+
+  <div class="background">
+
+    <div class="electrical_btn">
+      <img class="btn" src="images/electrical_btn.png" width=100% height=100% />
+    </div>
+    
+    <div class="structural_btn">
+      <img class="btn" src="images/structural_btn.png" width=100% height=100% />
+    </div>
+
+    <div class="panels">
+
+      <div class="light"></div>
+      <div class="projector"></div>
+      <div class="screen"></div>
+      <div class="fire"></div>
+
+    </div>
+
+    <div class="structure">
+
+      <div class="stud1">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="stud2">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="stud3">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="stud4">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="stud5">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="stud6">
+        <img class="studs" src="images/studs.png" width=100% height=100% />
+      </div>
+
+      <div class="flange">
+        <img class="flange_line" src="images/flange.png" width=3px height=100% />
+      </div>
+
+            <div class="stud_desc">
+        <img class="desc" src="images/studs_description.png" width=100% height=100% />
+      </div>
+
+      <div class="flange_desc">
+        <img class="desc" src="images/flange_description.png" width=100% height=100% />
+      </div>
+
+    </div>
+
+
+
+    <div class="elec">
+
+      <div class="wires">
+        <img class="wires_plain" src="images/wires.png" width=100% height=100% />
+      </div>
+
+      <div class="light1">
+        <img class="lights" src="images/light1.png" width=100% height=100% />
+      </div>
+
+      <div class="light2">
+        <img class="lights" src="images/light2.png" width=100% height=100% />
+      </div>
+
+      <div class="light3">
+        <img class="lights" src="images/light3.png" width=100% height=100% />
+      </div>
+
+      <div class="light4">
+        <img class="lights" src="images/light4.png" width=100% height=100% />
+      </div>
+
+      <div class="switch1"></div>
+      <div class="switch2"></div>
+      <div class="switch3"></div>
+      <div class="switch4"></div>
+
+            <div class="light_desc">
+        <img class="desc" src="images/light_description.png" width=100% height=100% />
+      </div>
+
+
+    </div>
+
+
+
+    <div class="desc">
+
+
+
+
+
+    </div>
+
+  </div>
+
+</body>
+</html> 

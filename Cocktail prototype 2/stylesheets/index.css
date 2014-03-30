@@ -1,0 +1,96 @@
+/* line 6, ../sass/index.scss */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 12, ../sass/index.scss */
+body, ul, li {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/* line 18, ../sass/index.scss */
+body {
+  font-size: 12px;
+  font-family: ubuntu, helvetica, arial;
+  background-color: black;
+}
+
+/* line 24, ../sass/index.scss */
+#header {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  background: #CD235C;
+  padding: 0;
+  color: #eee;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line 36, ../sass/index.scss */
+#wrapper {
+  position: absolute;
+  z-index: 1;
+  height: 150px;
+  width: 560px;
+  overflow: hidden;
+  padding-top: 35px;
+  top: 350px;
+  left: 120px;
+}
+
+/* line 48, ../sass/index.scss */
+#scroller {
+  position: absolute;
+  z-index: 1;
+  width: 2400px;
+  height: 80px;
+}
+
+/* line 56, ../sass/index.scss */
+#scroller ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 63, ../sass/index.scss */
+#scroller li {
+  width: 80px;
+  height: 80px;
+  float: left;
+  overflow: hidden;
+  border-radius: 40px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+/* line 73, ../sass/index.scss */
+#scroller li ~ li {
+  margin-left: 20px;
+}
+
+/* line 77, ../sass/index.scss */
+li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 85, ../sass/index.scss */
+.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten {
+  -webkit-transition: all 500ms;
+  opacity: 0.2;
+}
+/* line 89, ../sass/index.scss */
+.one.big, .two.big, .three.big, .four.big, .five.big, .six.big, .seven.big, .eight.big, .nine.big, .ten.big {
+  -webkit-transition: all 500ms;
+  -webkit-transform: scale(1.5);
+  opacity: 1;
+}

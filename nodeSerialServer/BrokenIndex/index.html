@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	 <script src="jquery.pulse.js"></script>
+
+	<script>
+		// open a connection to the serial server:
+		var socket = io.connect('http://localhost:8080');
+		var outputValue = false;		// value to send to the server
+		
+		 // when you get a serialdata event, do this:
+		socket.on('serialEvent', function (data) {
+			// set the stuff inside the element's HTML tags to
+			// whatever the 'value' property of the received data is:
+			textDisplay.innerHTML = data;
+			
+			if (data === "nada"){
+				$(".blink-btn").css({'background-color': 'black'})
+			}else if (data === "frenchPress"){
+				$(".blink-btn").css({'background-color': 'white'})
+			} else if (data === "coffeeGrinder"){
+				$(".blink-btn").css({'background-color': 'white'})
+			}
+
+		});
+		
+		// send data back to the server:
+		function heartBeat() {
+			// if ledState is true, output = 1. Else output = 0:
+			var output = outputValue ? '1':'0';
+			// send output back to the client:
+			socket.emit('data', output);
+			// toggle outputValue:
+			outputValue = !outputValue;
+		}
+		
+		// start an interval timer to run heartBeat() every two seconds:
+		setInterval(heartBeat, 2000);
+
+
+
+	$(window).on("load",function(){
+		$('.blink-btn').on('click', function(){	
+			$(this).find('.image-container').toggleClass("active");
+			console.log('fire');
+		});
+	});
+
+	</script>
+
+<style>
+
+	body {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		text-rendering: optimizelegibility;
+		background-color: black;
+		color:white;
+	}
+
+	#french-press{
+
+	}
+
+	.blink-btn{
+		position: absolute;
+		width: 40px;
+		height:40px;
+		border-radius: 20px;
+		background-color: white;
+		top: 100px;
+		left:200px;
+	}
+
+	.image-container{
+		display: none;
+	}
+
+	.image-container.active{
+		display: block;
+	}
+
+	.help{
+		position: absolute;
+		width: 100px;
+		height:100px;
+		top: 0px;
+		left:100px;
+	}
+
+	.recipe{
+		position: absolute;
+		width: 100px;
+		height:100px;
+		top: 150px;
+		left:100px;
+
+	}
+	.repair{
+		position: absolute;
+		width: 100px;
+		height:100px;
+		top: 300px;
+		left:100px;
+	}
+
+</style>
+
+	</head>
+	<body>
+	<div id="textDisplay">Text will show up here</div>
+
+
+	<div id="french-press">
+		<div class="blink-btn">
+			<div class="image-container">
+				<div class="help">INSTRUCTIONS</div>
+				<div class="recipe">MANUAL</div>
+				<div class="repair">TROUBLESHOOTING</div>
+			</div>
+		</div>
+	</div>
+
+	</body>
+</html>

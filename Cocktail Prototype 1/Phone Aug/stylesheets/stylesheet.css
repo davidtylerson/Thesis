@@ -1,0 +1,201 @@
+/* line 4, ../sass/stylesheet.scss */
+body {
+  position: absolute;
+  width: 1200px;
+  height: 760px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-color: white;
+  text-rendering: optimizelegibility;
+  background-color: black;
+  overflow: hidden;
+}
+
+/* line 16, ../sass/stylesheet.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 21, ../sass/stylesheet.scss */
+.phone-button {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  width: 100px;
+  height: 210px;
+  background-color: black;
+  border-color: #999999;
+  border-style: dashed;
+  border-width: 1px;
+}
+
+/* line 33, ../sass/stylesheet.scss */
+.content-area {
+  position: absolute;
+  top: 50px;
+  left: 200px;
+  width: 1000px;
+  height: 500px;
+  display: inline-block;
+}
+
+/* line 42, ../sass/stylesheet.scss */
+.schedule {
+  top: 0px;
+  display: none;
+}
+
+/* line 47, ../sass/stylesheet.scss */
+.schedule-head {
+  width: 300px;
+  height: 100px;
+  border-top-width: 5px;
+  border-top: solid;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+  border-top-width: 5px;
+  display: inline-block;
+}
+
+/* line 59, ../sass/stylesheet.scss */
+.day {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* line 68, ../sass/stylesheet.scss */
+.time {
+  margin-top: 5px;
+  margin-right: 5px;
+  font-size: 24px;
+  float: right;
+  color: white;
+}
+
+/* line 76, ../sass/stylesheet.scss */
+.date {
+  font-size: 60px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: white;
+}
+
+/* line 84, ../sass/stylesheet.scss */
+.schedule-body {
+  height: 394px;
+  width: 300px;
+  overflow: auto;
+}
+
+/* line 91, ../sass/stylesheet.scss */
+.event {
+  height: 99px;
+  width: 100%;
+  border-bottom: solid;
+  border-bottom-width: 1px;
+  border-color: white;
+  color: white;
+}
+
+/* line 101, ../sass/stylesheet.scss */
+.event-selected {
+  background-color: white;
+  color: black;
+}
+
+/* line 108, ../sass/stylesheet.scss */
+.event-left {
+  float: left;
+  width: 40%;
+  height: 100%;
+  display: inline-block;
+}
+
+/* line 115, ../sass/stylesheet.scss */
+.event-time {
+  margin-left: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+/* line 121, ../sass/stylesheet.scss */
+.event-name {
+  margin-left: 5px;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* line 127, ../sass/stylesheet.scss */
+.event-desc {
+  margin-left: 5px;
+  margin-top: 8px;
+}
+
+/* line 132, ../sass/stylesheet.scss */
+.event-right {
+  float: right;
+  width: 60%;
+  height: 100%;
+  display: inline-block;
+}
+
+/* line 139, ../sass/stylesheet.scss */
+.event-file {
+  position: absolute;
+  top: 0;
+  left: 320px;
+  width: 500px;
+  height: 695px;
+  display: inline-block;
+  border-top: solid;
+  border-top-width: 5px;
+  border-color: white;
+  overflow: auto;
+  display: none;
+  background-color: black;
+}
+
+/* line 154, ../sass/stylesheet.scss */
+.event-file-name {
+  margin-left: 5px;
+  margin-top: 8px;
+  font-weight: bold;
+  color: white;
+}
+
+/* line 161, ../sass/stylesheet.scss */
+.event-file-desc {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: white;
+}
+
+/* line 168, ../sass/stylesheet.scss */
+.event-file-attendees {
+  margin-left: 5px;
+  margin-top: 10px;
+  color: white;
+}
+
+/* line 174, ../sass/stylesheet.scss */
+.event-file-body {
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 20px;
+  font-size: 14px;
+  color: white;
+}
+
+/* line 182, ../sass/stylesheet.scss */
+.event-file-figure {
+  height: 300px;
+  width: 490px;
+  margin-left: 5px;
+  margin-top: 20px;
+}

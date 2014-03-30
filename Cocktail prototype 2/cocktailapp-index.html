@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Phone Augmentation</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link rel="stylesheet" href="stylesheets/cocktailapp-index.css">
+	
+	<style>
+
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+
+	$(window).on("load",function(){
+		console.log('hello world');
+		$('.available-btn').fadeIn(400);
+		$('.play-btn').delay(150).fadeIn(400);
+		$('.party-btn').delay(300).fadeIn(400);
+		$('.shop-btn').delay(450).fadeIn(400);
+		$('.back-btn').delay(800).fadeIn(400);
+	});
+	</script>
+
+</head>
+<body>
+		<div class='back-btn'><a href="index.html"><img src="images/back_btn.png"></a></div>
+	<div class = 'available-btn'><a href="cocktailapp.html"><img src="images/available_btn.png"></a></div>
+	<div class = 'play-btn'><a href="cocktailLessons.html"><img src="images/play_btn.png"></a></div>
+	<div class = 'party-btn'><img src="images/party_btn.png"></div>
+	<div class = 'shop-btn'><img src="images/shop_btn.png"></div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Phone Augmentation</title>
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<style>
+
+
+	body {
+		position: absolute;
+		width: 1280px;
+		height: 800px;
+		background-color: white;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		text-rendering: optimizelegibility;
+		background-color: white;
+	}
+
+	.phone-button{
+		position: absolute;
+		top: 50px;
+		left: 50px;
+		width: 100px;
+		height: 210px;
+		background-color: black;
+	}
+
+	.content-area{
+		position: absolute;
+		top: 50px;
+		left:200px;
+		width:1000px;
+		height:500px;
+		display: inline-block;
+	}
+
+	.schedule{
+		top: 0px;
+		display: none;
+	}
+
+	.schedule-head{
+		width: 300px;
+		height: 100px;
+		border-top-width: 5px;
+		border-top: solid;
+		border-bottom: solid;
+		border-bottom-width: 1px;
+		border-color: black;
+		border-top-width: 5px;
+		display: inline-block;
+	}
+
+	.day{
+		margin-top: 5px;
+		margin-left: 5px;
+		font-size: 24px;
+		font-weight: bold;
+	}
+
+	.time{
+		margin-top: 5px;
+		margin-right: 5px;
+		font-size: 24px;
+		float: right;
+	}
+	
+	.date{
+		font-size: 60px;
+		margin-top: 0px;
+		margin-bottom: 0px;
+		font-weight: bold;
+	}
+	
+	.schedule-body{
+		height:394px;
+		width: 300px;
+		overflow: auto;
+		
+	}
+
+	.event{
+		height:99px;
+		width:100%;
+		border-bottom: solid;
+		border-bottom-width: 1px;
+		border-color: black;
+	}
+
+	.event-left{
+		float: left;
+		width: 40%;
+		height: 100%;
+		display: inline-block;
+	}
+
+	.event-time{
+		margin-left: 5px;
+		font-size: 24px;
+		font-weight: bold;
+		margin-top: 8px;
+	}
+	.event-name{
+		margin-left: 5px;
+		margin-top: 8px;
+		font-weight: bold;
+	}
+
+	.event-desc{
+		margin-left: 5px;
+		margin-top: 8px;
+	}
+
+	.event-right{
+		float: right;
+		width: 60%;
+		height: 100%;
+		display: inline-block;
+	}
+
+	.event-file{
+		position: absolute;
+		top: 0;
+		left: 320px;
+		width: 500px;
+		height:695px;
+		display: inline-block;
+		border-top: solid;
+		border-top-width: 5px;
+		border-color: black;
+		overflow: auto;
+		display: none;
+		background-color: white;
+	}
+
+	.event-file-name{
+		margin-left: 5px;
+		margin-top: 8px;
+		font-weight: bold;
+	}
+
+	.event-file-desc{
+		margin-left: 5px;
+		margin-top: 10px;
+
+	}
+
+	.event-file-attendees{
+		margin-left: 5px;
+		margin-top: 10px;
+
+	}
+
+	.event-file-body{
+		margin-left: 5px;
+		margin-right: 5px;
+		margin-top: 20px;
+		font-size: 14px;
+
+	}
+	.event-file-figure{
+		height: 300px;
+		width: 490px;
+		margin-left: 5px;
+		margin-top: 20px;
+		background-color: black;
+	}
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+
+
+
+	$(window).on("load",function(){
+		console.log('hello world');
+
+
+
+		$('.event').click(function (event){	
+			$('.event').not(this).find('.event-file').hide();
+			$(this).find('.event-file').slideToggle(900);
+			console.log('fire');
+		});
+
+		$('.event').find('.event-file').click(function (event) {
+    event.stopPropagation();
+});
+
+
+
+		$(".phone-button").on('click', function(){
+			$('.schedule').slideToggle(900);
+		});
+
+	});
+
+
+
+
+
+
+
+	</script>
+</head>
+<body>
+
+	<div class = 'phone-button'></div>
+	<div class = 'content-area'>
+
+		<div class = 'schedule'>
+			
+
+			<div class = 'schedule-head'>
+
+
+				<span class = 'day'>Monday</span>
+				<span class = 'time'>6:30 AM</span>
+				<p class = 'date'>01/27</p> 
+
+			</div>
+
+			<div class = "schedule-body">
+				
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">7:00 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+
+					<div class = "event-file">
+						<p class = "event-file-name">Design Standards Recap</p>
+						<p class = "event-file-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing eli</p>
+						<p class = "event-file-attendees"><b>Attendees: </b>Hampre, Chris  Farnsworthy, Moontz  Branson, James</p>
+						<p class = "event-file-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est </p>
+
+						<div class = "event-file-figure"></div>
+						<div class = "event-file-figure"></div>
+
+						<p class = "event-file-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					</div>
+
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">7:15 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Brainstorm</div>
+						<div class = "event-desc">Sitting down to make changes to RF-03</div>
+					</div>
+
+
+					<div class = "event-file">
+						<p class = "event-file-name">Design Standards Brainstorm</p>
+						<p class = "event-file-desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing eli</p>
+						<p class = "event-file-attendees"><b>Attendees: </b>Hampre, Chris  Farnsworthy, Moontz  Branson, James</p>
+						
+						<div class = "event-file-figure"></div>
+						<p class = "event-file-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est </p>
+
+						<div class = "event-file-figure"></div>
+						<div class = "event-file-figure"></div>
+
+						<p class = "event-file-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborumLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+					</div>
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">8:00 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">8:30 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">9:00 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">10:00 AM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+				</div>
+				<div class = "event">
+					<div class = "event-left">
+						<div class = "event-time">12:30 PM</div>
+					</div>
+					<div class = "event-right">
+						<div class = "event-name">Design Standards Recap</div>
+						<div class = "event-desc">Sitting down to address new changes in RF-03</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Phone Augmentation</title>
+	<link rel="stylesheet" type="text/css" href="stylesheets/normalize.css">
+	<link rel="stylesheet" href="stylesheets/cocktaillessons.css">
+	
+	<style>
+
+	</style>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+
+	$(window).on("load",function(){
+		console.log('hello world');
+
+
+		$('.available-btn').fadeOut(600);
+		$('.party-btn').fadeOut(600);
+		$('.shop-btn').fadeOut(600);
+		$('.play-btn').addClass("animate");
+		setTimeout(function () {
+			$('.back-btn').fadeIn(900);
+			$('.available-lessons').slideDown(900);
+		}, 600);
+	});
+	</script>
+
+</head>
+<body>
+	<div class = 'available-btn'><img src="images/available_btn.png"></div>
+	<div class = 'play-btn'><img src="images/play_btn.png"></div>
+	<div class = 'party-btn'><img src="images/party_btn.png"></div>
+	<div class = 'shop-btn'><img src="images/shop_btn.png"></div>
+	<div class='back-btn'><a href="cocktailapp-index.html"><img src="images/back_btn.png"></a></div>
+
+
+	<div class = 'content-area'>
+		<div class = 'available-lessons'>
+			<div class = 'head'>
+				<span class = 'title'>Lessons</span>
+			</div>
+
+			<div class = "available-lessons-body">
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 1</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 2</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 3</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 4</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 5</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 6</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 7</strong></div>
+					</div>
+				</div>
+
+				<div class="video-tag">
+					<div class="left"><img src="images/play_btn_2.png"></div>
+					<div class="right">
+						<div class='name'><strong>Lesson 8</strong></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

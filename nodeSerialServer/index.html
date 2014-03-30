@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	 <script src="jquery.pulse.js"></script>
+	 	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
+
+
+	<script>
+		// open a connection to the serial server:
+		var socket = io.connect('http://localhost:8080');
+		var outputValue = false;		// value to send to the server
+		
+		 // when you get a serialdata event, do this:
+		socket.on('serialEvent', function (data) {
+			// set the stuff inside the element's HTML tags to
+			// whatever the 'value' property of the received data is:
+			//textDisplay.innerHTML = data;
+			
+		if (data === "frenchPress"){
+				$(".french-btn").fadeIn(900);
+			} 
+
+		});
+		
+		// send data back to the server:
+		function heartBeat() {
+			// if ledState is true, output = 1. Else output = 0:
+			var output = outputValue ? '1':'0';
+			// send output back to the client:
+			socket.emit('data', output);
+			// toggle outputValue:
+			outputValue = !outputValue;
+		}
+		
+		// start an interval timer to run heartBeat() every two seconds:
+		setInterval(heartBeat, 2000);
+
+
+	</script>
+
+		<script>
+	$(window).on("load",function(){	
+		$('.french-btn').on('click', function(){	
+			$('.image-container').slideToggle(800);
+
+			console.log('fire');
+		});	
+
+		$('.help').click(function (event){
+			$('.instructions').fadeToggle(500);
+			$('.recipe').find('img').animate({'opacity': '.2'});
+			$('.repair').find('img').animate({'opacity': '.2'});
+			$('.instructions').find('.top-bar').animate({'width': '100%'});
+			$('.instructions').find('.steps-container').slideDown(1200);
+		})
+	});
+	</script>
+
+<style>
+
+.box{
+	width: 200px;
+	height: 400px;
+	background-color: black;
+}
+
+</style>
+
+	</head>
+	<body>
+
+	<div id="french-press">
+		<div class="french-btn"></div>
+		<div class="image-container">
+			<div class="help"><img src="images/help.png"/></div>
+			<div class="recipe"><img src="images/recipe.png"/></div>
+			<div class="repair"><img src="images/repair.png"/></div>
+		</div>
+
+		<div class="instructions">
+			<div class="top-bar"></div>
+			<div class="steps-container">
+				<div class="steps"><img src="images/steps.png"/></div>
+			</div>
+		</div>
+
+
+		
+		
+	</div>
+
+	
+
+
+	</body>
+</html>

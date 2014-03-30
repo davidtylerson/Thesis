@@ -1,0 +1,334 @@
+.background{
+
+	overflow: hidden;
+	width: 1280px;
+	height: 800px;
+	background-color: black;
+	position: absolute;
+
+	.structural_btn{
+			position: absolute;
+			width: 144px;
+			height: 36px;
+			left: 20px;
+			top: 740px;
+			opacity:.4;
+
+			&.toggle{
+			opacity:1;
+		}
+	}
+
+		.electrical_btn{
+			position: absolute;
+			width: 137px;
+			height: 36px;
+			left: 20px;
+			top: 700px;
+			opacity:.4;
+
+			&.toggle{
+			opacity:1;
+		}
+	}
+
+	.panels{
+		display:none;
+
+		&.toggle{
+			display:block;
+		}
+
+		.light{
+			background-color: white;
+			position: absolute;
+			width: 120px;
+			height: 68px;
+			left: 1061px;
+			top: 685px;
+		}
+
+		.projector{
+			background-color: white;
+			position: absolute;
+			width: 94px;
+			height: 64px;
+			left: 1079px;
+			top: 558px;
+		}
+
+		.screen{
+			background-color: white;
+			position: absolute;
+			width: 47px;
+			height: 72px;
+			left: 1102px;
+			top: 414px;
+		}
+
+		.fire{
+			background-color: white;
+			position: absolute;
+			width: 82px;
+			height: 79px;
+			left: 1086px;
+			top: 122px;
+		}
+
+
+	}
+
+	.structure{
+
+			display:none;
+
+			&.toggle{
+			display:block;
+		}
+
+		.stud1{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 5px;
+			top: 0px;
+		}
+
+		.stud2{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 255px;
+			top: 0px;
+		}
+
+		.stud3{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 505px;
+			top: 0px;
+		}
+
+		.stud4{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 755px;
+			top: 0px;
+		}
+
+		.stud5{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 1005px;
+			top: 0px;
+		}
+
+		.stud6{
+			position: absolute;
+			width: 21px;
+			height: 800px;
+			left: 1252px;
+			top: 0px;
+		}
+
+		.flange{
+			position: absolute;
+			width: 20px;
+			height: 800px;
+			left: 138px;
+			top: 0px;
+		}
+
+				.stud_desc{
+			position: absolute;
+			width: 311px;
+			height: 247px;
+			left: 524px;
+			top: 120px;
+			opacity: 0;
+			transition: 700ms;
+
+			&.animate{
+				opacity: 1;
+			}
+
+
+		}
+
+		.flange_desc{
+			position: absolute;
+			width: 363px;
+			height: 299px;
+			left: 139px;
+			top: 290px;
+			opacity: 0;
+			transition: 700ms;
+
+			&.animate{
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.elec{
+
+			display:none;
+
+			&.toggle{
+			display:block;
+		}
+
+		.wires{
+			position: absolute;
+			width: 266px;
+			height: 744px;
+			left: 859px;
+			top: 0px;
+
+		}
+
+		.light1{
+			position: absolute;
+			width: 118px;
+			height: 749px;
+			left: 943px;
+			top: 0px;
+			opacity:0;
+			transition: 700ms;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+		.switch1{
+			position: absolute;
+			width: 16px;
+			height: 38px;
+			left: 1072px;
+			top: 700px;
+			opacity:.2;
+			background-color: #FF8500;
+
+			&.on{
+				opacity:1;
+			}
+		}
+		
+
+		.light2{
+			position: absolute;
+			width: 102px;
+			height: 733px;
+			left: 959px;
+			top: 0px;
+			opacity:0;
+			transition: 700ms;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+		.switch2{
+			position: absolute;
+			width: 16px;
+			height: 38px;
+			left: 1098px;
+			top: 700px;
+			opacity:.2;
+			background-color: #FF8500;
+
+			&.on{
+				opacity:1;
+			}
+
+		}
+		
+		
+
+		.light3{
+			position: absolute;
+			width: 86px;
+			height: 717px;
+			left: 975px;
+			top: 0px;
+			opacity:0;
+			transition: 700ms;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+		.switch3{
+			position: absolute;
+			width: 16px;
+			height: 38px;
+			left: 1124px;
+			top: 700px;
+			opacity:.2;
+			background-color: #FF8500;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+		.light4{
+			position: absolute;
+			width: 70px;
+			height: 701px;
+			left: 991px;
+			top: 0px;
+			opacity:0;
+			transition: 700ms;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+		.switch4{
+			position: absolute;
+			width: 16px;
+			height: 38px;
+			left: 1148px;
+			top: 700px;
+			opacity:.2;
+			background-color: #FF8500;
+
+			&.on{
+				opacity:1;
+			}
+		}
+
+						.light_desc{
+			position: absolute;
+			width: 281px;
+			height: 282px;
+			left: 662px;
+			top: 442px;
+			opacity: 0;
+			transition: 700ms;
+
+			&.animate{
+				opacity: 1;
+			}
+		}
+
+	}
+
+	.desc{
+
+
+
+
+	}
+
+}
+

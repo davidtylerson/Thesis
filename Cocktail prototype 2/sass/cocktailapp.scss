@@ -1,0 +1,221 @@
+	$backgroundcolor: black;
+	$foregroundcolor: white;
+
+	body {
+		position: absolute;
+		width: 1200px;
+		height: 760px;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+		font-weight: 300;
+		color: $foregroundcolor;
+		text-rendering: optimizelegibility;
+		background-color: $backgroundcolor;
+		overflow:hidden;
+	}
+
+	::-webkit-scrollbar { 
+		display: none; 
+	}
+
+	
+	.available-btn {
+		position:absolute;
+		top: 400px;
+		left: 120px;
+		width: 60px;
+		height: 60px; 
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+
+		&.animate{
+			-webkit-transition: all 700ms cubic-bezier(0.595, 0.075, 0.625, 1.7); 
+			-webkit-transform : translate(80px,0px);
+		}
+	}
+
+	.play-btn {
+		position:absolute;
+		top: 400px;
+		left: 200px;
+		max-width: 60px;
+		height: 60px;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+
+	}
+
+	.party-btn {
+		position:absolute;
+		top: 400px;
+		left: 280px;
+		width: 60px;
+		height: 60px;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.shop-btn {
+		position:absolute;
+		top: 400px;
+		left: 360px;
+		width: 60px;
+		height: 60px;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.back-btn {
+		display:none;
+		position: absolute;
+		top: 420px;
+		left: 120px;
+		width: 25px;
+		height:25px;
+
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+
+	.content-area{
+		position: absolute;
+		top: 470px;
+		left:120px;
+		width:1000px;
+		height:400px;
+		display: inline-block;
+
+		.available-cocktails{
+			
+			position: absolute;
+			display: none;
+
+			.head{
+				width: 240px;
+				height: 34px;
+				border-top: solid;
+				border-bottom: solid;
+				border-bottom-width: 1px;
+				border-color: $foregroundcolor;
+				border-top-width: 5px;
+				display: inline-block;
+				font-size: 20px;
+				padding-top: 5px;
+
+				.title{
+					font-weight: bold;
+				}
+			}
+			.available-cocktails-body{
+				height: 240px;
+				width: 240px;
+				overflow: auto;
+			}
+			.cocktail{
+				width: 240px;
+				height: 59px;
+				border-bottom: solid;
+				border-bottom-width: 1px;
+				border-color: $foregroundcolor;
+				padding-top: 10px;
+
+				.cocktail-left{
+					width: 20%;
+					display:inline-block;
+					float: left;
+
+					img{ margin-left:4px;
+						margin-top:4px;}
+					}
+					.cocktail-right{
+						width: 80%;
+						display:inline-block;
+						float: right;
+
+						.cocktail-name{
+							font-size: 15px;
+							margin-left: 8px;
+						}
+						.base-spirit{
+							font-size: 12px;
+							margin-left: 8px;
+						}
+						.profile{
+							font-size: 12px;
+							margin-left: 8px;
+						}
+					}
+				}
+
+
+				.cocktail-selected {
+					background-color:#494949;
+				}
+				.cocktail-recipe{
+					position: absolute;
+					top: 0;
+					left: 280px;
+					width: 330px;
+					display: inline-block;
+					background-color: $backgroundcolor;
+					display: none;
+
+					.header{
+						border-top: solid;
+						border-bottom: solid;
+						border-top-width: 5px;
+						border-bottom-width: 1px;
+						border-color: $foregroundcolor;
+						font-size: 20px;
+						height: 34px;
+						padding-top: 5px;
+					}
+					.recipe-body{
+						margin-right: 0;						
+						overflow: auto;
+						height:305px;
+
+						.recipe-step{
+							padding-top: 10px;
+							padding-bottom: 20px;
+							height: 122px;
+							width: 330px;
+
+							.left{
+								width: 30%;
+								float: left;								
+							}
+							.right{
+								width: 70%;
+								float: right;
+								margin-top: 15px;
+
+								.action{
+									font-size: 15px;
+								}
+								ul{
+									font-size: 12px;
+									padding-left:10px;				
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+
+

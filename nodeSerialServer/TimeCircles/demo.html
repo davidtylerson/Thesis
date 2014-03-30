@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+        <script type="text/javascript" src="inc/TimeCircles.js"></script>
+        <link rel="stylesheet" href="inc/TimeCircles.css" />
+    </head>
+    <body>
+        <div class="container">
+    
+            <h2>Counting down 15 minutes (900 seconds)</h2>
+            <div id="CountDownTimer" data-timer="60" style="width: 1000px; height: 250px;"></div>
+            <button class="btn btn-success startTimer">Start Timer</button>
+            <hr>
+        </div>
+        <script>
+
+            $("#CountDownTimer").TimeCircles( {time: { Days: { show: false }, Hours: { show: false }, Minutes: {show:false}}});
+            
+            $("#CountDownTimer").TimeCircles().stop();
+            // Start and stop are methods applied on the public TimeCircles instance
+            $(".startTimer").click(function() {
+                $("#CountDownTimer").TimeCircles().start();
+            });
+            
+        </script>       
+    </body>
+</html>

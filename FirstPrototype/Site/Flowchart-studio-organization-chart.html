@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+ <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+ <meta charset="utf-8" />
+ <title>Thesis Prototype 1</title>
+ <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+ <script src="http://code.jquery.com/jquery-migrate-1.1.1.min.js"></script>
+ <script>
+
+
+
+
+ $(window).on("load",function(){
+    var dots = $(".dot"),
+    mainBtn = $("#main-btn");
+
+    mainBtn.addClass("animate");
+
+    mainBtn.on("click", function (event) {
+    dots.toggleClass("animate");
+      });
+console.log("hello world");
+
+ $("a").click(function (event) {
+  event.preventDefault();
+  window.location = $(this).attr("href");
+});
+    });
+
+
+
+
+
+</script>
+<style>
+</style>
+</head>
+<body>
+
+
+<div class="background">
+
+<div class="stud1">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+<div class="stud2">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+<div class="stud3">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+<div class="stud4">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+<div class="stud5">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+<div class="stud6">
+  <img class="studs" src="images/studs.png" width=100% height=100% />
+</div>
+
+  
+</div>
+
+</body>
+</html> 
